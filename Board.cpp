@@ -1,10 +1,13 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <algorithm>
 using namespace std;
 
 const int SIZE = 4;
 
 // Функция для создания двумерного массива 4 на 4
-void initBoard(int Bpard[SIZE][SIZE]) {
+void initBoard(int Board[SIZE][SIZE]) {
     int value = 1;
 
     for (int i = 0; i < SIZE; ++i) {
@@ -34,7 +37,7 @@ void shuffleBoard(int Board[SIZE][SIZE]) {
     index = 0;
     for (int i = 0; i < SIZE; ++i) {
         for (int j = 0; j < SIZE; ++j) {
-            array[i][j] = flatBoard[index++];
+            Board[i][j] = flatBoard[index++];
         }
     }
 }
