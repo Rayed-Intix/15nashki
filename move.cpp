@@ -3,21 +3,53 @@
 
 using namespace std;
 
-void Movement(vector<vector<int>> &v){
+void _swap(int& a, int& b){
+	int t = a;
+	a = b;
+	b = t;
+}
+
+void Movement(int v[4][4], int& x, int& y){
 	char t;
-	do{
-		cin >> t;
-		switch(t){
-		case 'w':
-			break;
-		case 'a':
-			break;
-		case 's':
-			break;
-		case 'd':
-			break;
-		default:
-			cerr << "Incorrect Move. Try again!\n";
+	cin >> t;
+	switch(t){
+	case 'w':
+		if(y != 0)
+		{
+			_swap(v[y][x], v[y-1][x]);
+			y = y - 1;
 		}
-	}while(!Check(v));
+		else
+			cerr << "Incorrect Move. Try again\n";
+		break;
+	case 'a':
+		if(x != 0)
+		{
+			_swap(v[y][x], v[y][x-1]);
+			x = x - 1;
+		}
+		else
+			cerr << "Incorrect Move. Try again!\n";
+		break;
+	case 's':
+		if(y != 3)
+		{
+			_swap(v[y][x], v[y+1][x]);
+			y = y + 1;
+		}
+		else
+			cerr << "Incorrect Move. Try again!\n";
+		break;
+	case 'd':
+		if(x != 3)
+		{
+			_swap(v[y][x], v[y][x+1]);
+			x = x + 1;
+		}
+		else
+			cerr << "Incorrect Move. Try again!\n";
+		break;
+	default:
+		cerr << "Incorrect Move. Try again!\n";
+	}
 }
