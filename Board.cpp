@@ -15,6 +15,7 @@ void initBoard(int Board[SIZE][SIZE]) {
             Board[i][j] = value++;
         }
     }
+    Board[3][3] = 0;
 }
 
 // Функция для перемешивания элементов двумерного массива

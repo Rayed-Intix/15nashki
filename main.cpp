@@ -11,7 +11,7 @@ int main(){
 	printBoard(Board);
 	while (!Check(Board))
 	{
-		Movement(Board);
+		Movement(Board, x, y);
 		printBoard(Board);
 	}
 	cout << "\nВы выиграли\n";
