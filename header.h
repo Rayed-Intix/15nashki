@@ -6,4 +6,4 @@ void initBoard(int[4][4]);
 void shuffleBoard(int[4][4]);
 void findCoord(int[4][4], int&, int&);
 bool Check(int[4][4]);
-void Movement(int[4][4], int&, int&);
+void Movement(int[4][4], int&, int&, char);
