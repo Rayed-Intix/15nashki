@@ -23,6 +23,7 @@ void shuffleBoard(int Board[SIZE][SIZE]) {
         srand(time(0));
         int start = 1;
         int end = 4;
+	int x=3, y=3;
     for (int i = 0; i <= 80; i++){
         int m = rand() % (end - start + 1) + start;
         switch(m){

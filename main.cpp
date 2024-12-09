@@ -12,11 +12,7 @@ int main(){
 	printBoard(Board);
 	while (!Check(Board))
 	{
-<<<<<<< HEAD
 		cin >> direction;
-=======
-		cin >> directon;
->>>>>>> refs/remotes/origin/main
 		Movement(Board, x, y, direction);
 		printBoard(Board);
 	}
