@@ -4,8 +4,10 @@ using namespace std;
 
 int main(){
 	int Board[4][4];
+	int x, y;
 	initBoard(Board);
 	shuffleBoard(Board);
+	findCoord(Board, x, y);
 	printBoard(Board);
 	while (!Check(Board))
 	{
