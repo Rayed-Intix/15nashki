@@ -3,6 +3,17 @@
 
 using namespace std;
 
+void findCoord(int v[4][4], int& x, int& y){
+	for(int i = 0; i < 4; i++){
+		for(int j = 0; j < 4; j++){
+			if(v[i][j] == 0){
+				x = j;
+				y = i;
+			}
+		}
+	}
+}
+
 void _swap(int& a, int& b){
 	int t = a;
 	a = b;
