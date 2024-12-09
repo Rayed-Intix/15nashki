@@ -22,7 +22,7 @@ void _swap(int& a, int& b){
 
 void Movement(int v[4][4], int& x, int& y,char t){
 	switch(t){
-	case 'w':
+	case 's':
 		if(y != 0)
 		{
 			_swap(v[y][x], v[y-1][x]);
@@ -31,7 +31,7 @@ void Movement(int v[4][4], int& x, int& y,char t){
 		else
 			cerr << "Incorrect Move. Try again\n";
 		break;
-	case 'a':
+	case 'd':
 		if(x != 0)
 		{
 			_swap(v[y][x], v[y][x-1]);
@@ -40,7 +40,7 @@ void Movement(int v[4][4], int& x, int& y,char t){
 		else
 			cerr << "Incorrect Move. Try again!\n";
 		break;
-	case 's':
+	case 'w':
 		if(y != 3)
 		{
 			_swap(v[y][x], v[y+1][x]);
@@ -49,7 +49,7 @@ void Movement(int v[4][4], int& x, int& y,char t){
 		else
 			cerr << "Incorrect Move. Try again!\n";
 		break;
-	case 'd':
+	case 'a':
 		if(x != 3)
 		{
 			_swap(v[y][x], v[y][x+1]);
