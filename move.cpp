@@ -20,10 +20,35 @@ void _swap(int& a, int& b){
 	b = t;
 }
 
+<<<<<<< HEAD
 void Movement(int v[4][4], int& x, int& y, char t){
 	switch(t){
 	case 'w':
 		if(y != 1)
+=======
+void Movement(int v[4][4], int& x, int& y,char t){
+	switch(t){
+	case 's':
+		if(y != 0)
+		{
+			_swap(v[y][x], v[y-1][x]);
+			y = y - 1;
+		}
+		else
+			cerr << "Incorrect Move. Try again\n";
+		break;
+	case 'd':
+		if(x != 0)
+		{
+			_swap(v[y][x], v[y][x-1]);
+			x = x - 1;
+		}
+		else
+			cerr << "Incorrect Move. Try again!\n";
+		break;
+	case 'w':
+		if(y != 3)
+>>>>>>> refs/remotes/origin/main
 		{
 			_swap(v[y][x], v[y+1][x]);
 			y = y + 1;
@@ -32,7 +57,11 @@ void Movement(int v[4][4], int& x, int& y, char t){
 			cerr << "Incorrect Move. Try again\n";
 		break;
 	case 'a':
+<<<<<<< HEAD
 		if(x != 1)
+=======
+		if(x != 3)
+>>>>>>> refs/remotes/origin/main
 		{
 			_swap(v[y][x], v[y][x+1]);
 			x = x + 1;

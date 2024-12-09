@@ -20,27 +20,18 @@ void initBoard(int Board[SIZE][SIZE]) {
 
 // Функция для перемешивания элементов двумерного массива
 void shuffleBoard(int Board[SIZE][SIZE]) {
-    int flatBoard[SIZE * SIZE];
-    int index = 0;
-
-    // Преобразуем двумерный массив в одномерный
-    for (int i = 0; i < SIZE; ++i) {
-        for (int j = 0; j < SIZE; ++j) {
-            flatBoard[index++] = Board[i][j];
+        srand(time(0));
+        int start = 1;
+        int end = 4;
+    for (int i = 0; i <= 80; i++){
+        int m = rand() % (end - start + 1) + start;
+        switch(m){
+        case 1: Movement(Board, x, y, 'w');break;
+        case 2: Movement(Board, x, y, 'a');break;
+        case 3: Movement(Board, x, y, 's');break;
+        case 4: Movement(Board, x, y, 'd');break;
         }
-    }
-
-    // Перемешивание
-    srand(static_cast<unsigned int>(time(0))); // Инициализация генератора случайных чисел
-    random_shuffle(flatBoard, flatBoard + SIZE * SIZE);
-
-    // Обратно преобразуем одномерный массив в двумерный
-    index = 0;
-    for (int i = 0; i < SIZE; ++i) {
-        for (int j = 0; j < SIZE; ++j) {
-            Board[i][j] = flatBoard[index++];
         }
-    }
 }
 
 // Функция для вывода двумерного массива
