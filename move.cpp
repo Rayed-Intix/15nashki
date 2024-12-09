@@ -20,9 +20,7 @@ void _swap(int& a, int& b){
 	b = t;
 }
 
-void Movement(int v[4][4], int& x, int& y){
-	char t;
-	cin >> t;
+void Movement(int v[4][4], int& x, int& y,char t){
 	switch(t){
 	case 'w':
 		if(y != 0)
