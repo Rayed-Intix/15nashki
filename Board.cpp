@@ -26,10 +26,10 @@ void shuffleBoard(int Board[SIZE][SIZE]) {
     for (int i = 0; i <= 80; i++){
         int m = rand() % (end - start + 1) + start;
         switch(m){
-        case 1: Movement(Board, x, y, m);break;
-        case 2: Movement(Board, x, y, m);break;
-        case 3: Movement(Board, x, y, m);break;
-        case 4: Movement(Board, x, y, m);break;
+        case 1: Movement(Board, x, y, 'w');break;
+        case 2: Movement(Board, x, y, 'a');break;
+        case 3: Movement(Board, x, y, 's');break;
+        case 4: Movement(Board, x, y, 'd');break;
         }
         }
 }
