@@ -24,7 +24,7 @@ void shuffleBoard(int Board[SIZE][SIZE]) {
         int start = 1;
         int end = 4;
 	int x=3, y=3;
-    for (int i = 0; i <= 80; i++){
+    for (int i = 0; i <= 1000000; i++){
         int m = rand() % (end - start + 1) + start;
         switch(m){
         case 1: Movement(Board, x, y, 'w');break;
