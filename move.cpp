@@ -20,42 +20,40 @@ void _swap(int& a, int& b){
 	b = t;
 }
 
-void Movement(int v[4][4], int& x, int& y){
-	char t;
-	cin >> t;
+void Movement(int v[4][4], int& x, int& y, char t){
 	switch(t){
 	case 'w':
-		if(y != 0)
-		{
-			_swap(v[y][x], v[y-1][x]);
-			y = y - 1;
-		}
-		else
-			cerr << "Incorrect Move. Try again\n";
-		break;
-	case 'a':
-		if(x != 0)
-		{
-			_swap(v[y][x], v[y][x-1]);
-			x = x - 1;
-		}
-		else
-			cerr << "Incorrect Move. Try again!\n";
-		break;
-	case 's':
-		if(y != 3)
+		if(y != 1)
 		{
 			_swap(v[y][x], v[y+1][x]);
 			y = y + 1;
 		}
 		else
-			cerr << "Incorrect Move. Try again!\n";
+			cerr << "Incorrect Move. Try again\n";
 		break;
-	case 'd':
-		if(x != 3)
+	case 'a':
+		if(x != 1)
 		{
 			_swap(v[y][x], v[y][x+1]);
 			x = x + 1;
+		}
+		else
+			cerr << "Incorrect Move. Try again!\n";
+		break;
+	case 's':
+		if(y != 2)
+		{
+			_swap(v[y][x], v[y-1][x]);
+			y = y - 1;
+		}
+		else
+			cerr << "Incorrect Move. Try again!\n";
+		break;
+	case 'd':
+		if(x != 2)
+		{
+			_swap(v[y][x], v[y][x-1]);
+			x = x - 1;
 		}
 		else
 			cerr << "Incorrect Move. Try again!\n";
